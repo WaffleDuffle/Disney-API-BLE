@@ -136,7 +136,7 @@ class MyCharacteristicCallbacks: public BLECharacteristicCallbacks {
             DynamicJsonDocument Doc(16384);
             std::string ID = JsonDoc["id"];
             String temp_URL = "http://proiectia.bogdanflorea.ro/api/disney-characters/character?_id=";
-            String URL = temp_URL + String(ID.c_str());
+            String URL = temp_URL + String(ID);
             Serial.println(URL.c_str());
             HTTPClient http;
             http.begin(URL);
